@@ -3,12 +3,12 @@
   "description": "Bot desenvolvido para ser utilizado no Discord do ClanST",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "discord.js": "^14.11.0"
+    "discord.js": "^14.11.0",
+    "dotenv": "^16.0.3"
   },
   "keywords": [
     "bot-discord"
