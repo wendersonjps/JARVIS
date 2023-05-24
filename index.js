@@ -32,6 +32,18 @@ client.login(TOKEN)
 
 // Bot Interaction Listener
 client.on(Events.InteractionCreate, async interaction => {
+    if (interaction.isStringSelectMenu()) {
+        const selected = interaction.values[0]
+        if (selected == 'javascript') {
+            await interaction.reply('Documentação do JavaScript: https://www.w3schools.com/js/')
+        } else if (selected == 'nodejs') {
+            await interaction.reply('Documentação do Node.js: https://nodejs.org/en')
+        } else if (selected == 'reactjs') {
+            await interaction.reply('Documentação do React.js: https://react.dev')
+        } else if (selected == 'discordjs') {
+            await interaction.reply('Documentação do Discord.js: https://discord.js.org')
+        }
+    }
     if (!interaction.isChatInputCommand()) return
     const command = interaction.client.commands.get(interaction.commandName)
     if (!command) {
